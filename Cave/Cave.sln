@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cave", "Cave.csproj", "{5EDDF991-30DD-90B7-39D7-BFF001A6C7E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cave.Plugins", "Cave.Plugins.csproj", "{CA7A3DE7-B1F1-2D4A-197F-32006A13A9C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cave.Editor.Plugins", "Cave.Editor.Plugins.csproj", "{8DA93BFB-EEBA-FBD2-B17A-4352D017D49C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EDDF991-30DD-90B7-39D7-BFF001A6C7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDDF991-30DD-90B7-39D7-BFF001A6C7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDDF991-30DD-90B7-39D7-BFF001A6C7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDDF991-30DD-90B7-39D7-BFF001A6C7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7A3DE7-B1F1-2D4A-197F-32006A13A9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7A3DE7-B1F1-2D4A-197F-32006A13A9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7A3DE7-B1F1-2D4A-197F-32006A13A9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7A3DE7-B1F1-2D4A-197F-32006A13A9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA93BFB-EEBA-FBD2-B17A-4352D017D49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA93BFB-EEBA-FBD2-B17A-4352D017D49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA93BFB-EEBA-FBD2-B17A-4352D017D49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA93BFB-EEBA-FBD2-B17A-4352D017D49C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
