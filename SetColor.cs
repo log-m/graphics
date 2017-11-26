@@ -14,7 +14,7 @@ namespace Script
 		private float _timeLeft;
 		private float _numObjects;
         private MaterialPropertyBlock prop;
-        Color[] pixels;
+        Color32[] pixels;
 
         // Use this for initialization
         private void Start()
@@ -26,8 +26,12 @@ namespace Script
 			RecursiveCount(transform);
 			_timeLeft += 1.0f / _numObjects;
             _newBlack = new Texture2D(Blank.width, Blank.height);
-            pixels = Enumerable.Repeat(Color.black, Blank.width * Blank.height).ToArray();
-            _newBlack.SetPixels(pixels);
+            pixels = new Color32[Blank.width * Blank.height];
+            Color32 b = new Color32(0, 0, 0, 255);
+            for(int i = 0; i < pixels.Length;i++){
+                pixels[i] = b;
+            }
+            _newBlack.SetPixels32(pixels);
             _newBlack.Apply();
             StartCoroutine(RecursiveColor(transform));
            
@@ -57,11 +61,11 @@ namespace Script
 			{
                 
                 _childRender = t.GetComponent<Renderer>();
-               Texture2D _black2 = new Texture2D(Blank.width, Blank.height);
-                _black2.SetPixels(pixels);
-                _black2.Apply();
+               _newBlack = new Texture2D(Blank.width, Blank.height);
+                _newBlack.SetPixels32(pixels);
+                _newBlack.Apply();
                 _childRender.GetPropertyBlock(prop);
-                prop.SetTexture("_MainTex", _black2);
+                prop.SetTexture("_MainTex", _newBlack);
                 _childRender.SetPropertyBlock(prop);
                 print("percentage done: " + _timeLeft);
                 //foreach (var VARIABLE in _childRender.materials)
