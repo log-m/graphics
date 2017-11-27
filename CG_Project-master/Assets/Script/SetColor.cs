@@ -8,6 +8,7 @@ namespace Script
 	{
 
 		public Texture2D Blank;
+        public Camera cam;
         //public GameObject template;
 		private Renderer _childRender;
 		private Texture2D _newBlack;
@@ -52,11 +53,16 @@ namespace Script
 					RecursiveCount(t.GetChild(i));
 				}
 			}
+            
 		}
 
 		private IEnumerator RecursiveColor(Transform t)
 		{
 			//base case
+            if(t.gameObject.name == "Stairs")
+            {
+                cam.GetComponent<Camera>().enabled = true;
+            }
 			if (t.childCount == 0)
 			{
                 

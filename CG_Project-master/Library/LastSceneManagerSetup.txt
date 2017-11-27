@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/Scene/Rainbow_Shader.unity
+- path: Assets/Scene/MainMenu.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scene/Rainbow_Shader.unity
+  isLoaded: 0
+  isActive: 0

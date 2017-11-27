@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadSceneOnClick : MonoBehaviour
 {
     AsyncOperation async;
-
-    public void StartLoading()
+    public Camera menu;
+    public Camera fps;
+    /*public void StartLoading()
+    {
+        StartCoroutine(load());
+        
+    }*/
+    void Begin()
     {
         StartCoroutine(load());
     }
-
     IEnumerator load()
     {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
@@ -23,6 +29,7 @@ public class LoadSceneOnClick : MonoBehaviour
 
     public void ActivateScene()
     {
+        GameObject.Find("TitleText").GetComponent<Text>().text = "Loading...";
         SceneManager.LoadScene(1);
 
     }
