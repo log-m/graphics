@@ -2,7 +2,7 @@
 {
 	Properties
 	{
-		 [PerRendererData] _MainTex ("Texture", 2D) = "white" {}
+		[PerRendererData] _MainTex("Texture", 2D) = "white" {}
          _FirstColor ("Color in First", Color) = (1, 0, 0, 1)
 		 _SecondColor("Color in Second", Color) = (1, 1, 0, 1)
          _ThirdColor ("Color in Third", Color) = (0, 1, 0, 1)

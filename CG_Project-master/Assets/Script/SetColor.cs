@@ -33,13 +33,6 @@ namespace Script
             }
             _newBlack.SetPixels32(pixels);
             _newBlack.Apply();
-            _childRender = transform.GetComponent<Renderer>();
-            _newBlack = new Texture2D(Blank.width, Blank.height);
-            _newBlack.SetPixels32(pixels);
-            _newBlack.Apply();
-            _childRender.GetPropertyBlock(prop);
-            prop.SetTexture("_MainTex", _newBlack);
-            _childRender.SetPropertyBlock(prop);
             StartCoroutine(RecursiveColor(transform));
            
 
